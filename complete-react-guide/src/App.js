@@ -8,6 +8,12 @@ function App() {
     { title: 'car insurnance', amount: 3223, date: new Date(2021, 2, 28) },
     { title: 'cat insurnance', amount: 40.23, date: new Date(2021, 2, 26) },
   ]
+
+  const addExpenseHandler = expense => {
+    console.log('app.js')
+    console.log(expense)
+  }
+
   return (
     <Card className="App">
 
@@ -22,7 +28,7 @@ function App() {
      date={expenses[1].date}
       > </ExpenseItem>
 
-    <NewExpense />
+    <NewExpense onAddExpense={addExpenseHandler}/>
     </Card>
   );
 }
